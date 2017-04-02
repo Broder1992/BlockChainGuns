@@ -101,7 +101,7 @@ func (t *SimpleChaincode) read(stub shim.ChaincodeStubInterface, args []string) 
 	var err error
 
 	if len(args) != 1 {
-		return nil, error.New("Incorrect number of arguments.")
+		return nil, errors.New("Incorrect number of arguments.")
 	}
 
 	name = args[0]
