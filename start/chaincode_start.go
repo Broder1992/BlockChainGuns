@@ -61,7 +61,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
 	return nil, errors.New("Received unknown function for invocation: " + function)
 }
 
-//Write the passed String value to the transaction fitting the kay name provided.
+//Write the provided String value to the block chain ledger. 
 func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 	var name, value string
 	var err error
